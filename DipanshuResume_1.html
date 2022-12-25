@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Dipanshu Mewara</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c30b5569-4d01-4876-8be9-d729a8fe89b5" class="page sans"><header><img class="page-cover-image" src="Dipanshu%20Mewara%20c30b55694d0148768be9d729a8fe89b5/Screenshot_2022-12-25_at_11.06.40_AM.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👨🏻‍💻</span></div><h1 class="page-title">Dipanshu Mewara</h1></header><div class="page-body"><p id="7b3d7d51-2c52-48cf-98d1-bf69aed23b80" class="block-color-blue">☎️ +91-7206225619<strong>                                    </strong>✉️ <a href="mailto:dipanshu15102000@gmail.com">dipanshu15102000@gmail.com</a>                                  📃 <a href="https://www.linkedin.com/in/dipanshu/">Linkedin://dipanshu </a></p><hr id="64e6e807-6aed-422a-8f88-74583218ed03"/><ul id="d40d22a4-082e-4196-a597-3fc759b63e1e" class="toggle"><li><details open=""><summary>📚 <strong>Academics </strong></summary><table id="516afc39-78a6-4989-8a89-bb57b83e8e19" class="simple-table"><tbody><tr id="e56455d9-7237-4e50-bd22-5822e3a1f3af"><td id="eukv" class="" style="width:132px"><strong>Degree/Class</strong></td><td id="P?ok" class="" style="width:364px"><strong>Institute/Board</strong></td><td id="qWDZ" class="" style="width:202px"><strong>CGPA/Percentage</strong></td><td id="L~{n" class="" style="width:135px"><strong>Year</strong></td></tr><tr id="6a791bb8-2a93-418e-bd93-6a39186b0687"><td id="eukv" class="" style="width:132px">B.Tech(CSE)</td><td id="P?ok" class="" style="width:364px">NIT Kurukshetra</td><td id="qWDZ" class="" style="width:202px">9.0633</td><td id="L~{n" class="" style="width:135px">2020</td></tr><tr id="52165758-b4c1-4fd9-b16d-d4495801d418"><td id="eukv" class="" style="width:132px">12th</td><td id="P?ok" class="" style="width:364px">Rajasthan Board of Secondary Education</td><td id="qWDZ" class="" style="width:202px">91.80%</td><td id="L~{n" class="" style="width:135px">2015</td></tr><tr id="7c311604-d16f-4219-b043-4dac9ca39f00"><td id="eukv" class="" style="width:132px">10th</td><td id="P?ok" class="" style="width:364px">Rajasthan Board of Secondary Education</td><td id="qWDZ" class="" style="width:202px">86.17%</td><td id="L~{n" class="" style="width:135px">2013</td></tr></tbody></table></details></li></ul><ul id="db3b528c-6da1-43e7-bbb7-affb3d0596a0" class="toggle"><li><details open=""><summary>🚀 <strong>Work Experience                                                                                                                     </strong>Jun’20 - present(2 years 6 months)</summary><ul id="38670069-1930-4ceb-8453-8ecda2aa4e48" class="toggle"><li><details open=""><summary><strong>Unacademy</strong>(EdTech)<strong>                                                                                                               </strong>Oct’21 - present(1 year 3 months)</summary><p id="addd2a33-a225-4794-86ac-94fc57ad6379" class="">🌏 <strong>Location</strong>: Bengaluru, India</p><p id="42cf7141-992f-44ed-a69c-b7cdf287f1be" class="">🎃 <strong>Role</strong>: Software Engineer(Backend Engineer)<div class="indented"><p id="f7ea6e1d-94e8-49fc-ad65-83615c83325d" class="">Unacademy Learner App: Working in a pod that focuses on pre-subscribed learner experience ie. learner activation products, payments, refunds, subscription management etc</p></div></p><p id="a38eeb1e-123d-4120-8e91-9dee327fc458" class="">🛠️ <strong>Tech</strong>: Python(django), MySQL, AWS, Go</p><ul id="61cd3dda-7f1c-4fe1-b281-239f7d6ad6be" class="toggle"><li><details open=""><summary>📒 <strong>Key</strong> <strong>Projects:</strong></summary><ol type="1" id="92a9196a-a5f5-47dd-9be1-f723b72b6ce6" class="numbered-list" start="1"><li>Revamped payment emails flow: restructured complete email(which are sent post purchase) flow using OOP concepts ie. welcome, invoice, benefit emails etc, new structure is open for extension for any new use-case</li></ol><ol type="1" id="87a40528-b192-4526-9a22-31378c8cb857" class="numbered-list" start="2"><li>Daily Scholarship Test: <ol type="a" id="08d26fec-5ce2-409d-ac65-9f2c1d31c2e8" class="numbered-list" start="1"><li>Built backend for DST to handling learner-test state, generating referral codes and applicability of referral codes</li></ol><ol type="a" id="fb9cb886-5823-47be-9dea-59c27957ad70" class="numbered-list" start="2"><li>feature details: Its an activation-focused feature for free learners. Demo -&gt; <a href="https://drive.google.com/drive/folders/1fmQf9ha-UihG-IfCaMA-jn5RgVbFBcmC?usp=share_link">drive link</a></li></ol></li></ol><ol type="1" id="254267f8-cf6c-44d3-98b3-5f10a8935f96" class="numbered-list" start="3"><li>Added support for subscription upgrade(Lite upgrade) and new type of content selling</li></ol><ol type="1" id="2f72f503-9a44-4cfd-98c1-0255ac478954" class="numbered-list" start="4"><li>Generic Banners: <ol type="a" id="89b753b2-8452-492b-9447-19fd2ce79ef5" class="numbered-list" start="1"><li>I have done LLD, DB Schema and built backend to show banners on unacademy learner web/app</li></ol><ol type="a" id="3657a7f7-7522-47e0-ae5b-ea21514f62a7" class="numbered-list" start="2"><li>feature details: this feature is quite flexible and support team can add different format of banners for any category and schedule at any start and end time. Demo → <a href="https://drive.google.com/drive/folders/1ITmnGpJb5pV5adRXv1HU_3ngFoTm7F51?usp=share_link">drive link</a></li></ol></li></ol><ol type="1" id="be239860-8bd9-4c7e-a093-dcb1a72cf7fd" class="numbered-list" start="5"><li>Integrated new loan provider and new type of payment method(instalments)</li></ol><ol type="1" id="a197b5de-9292-411f-bac8-f0576af72d90" class="numbered-list" start="6"><li>Dynamic/Recommended payment method ordering in purchase flow: <ol type="a" id="c1d247c5-b9de-4387-b22c-00d1603865d7" class="numbered-list" start="1"><li>Revamped payment method flow, LLD and DB schema design independently</li></ol><ol type="a" id="a31ae1e6-4a30-4781-8ccc-33fa612e1ae0" class="numbered-list" start="2"><li>feature details: product managers or ops team can control every aspect of payment methods like which payment method to be shown for which price range and in what order. Demo → <a href="https://drive.google.com/drive/folders/1q5HMmuQaZJ6KDWjwCpv2W8K7TgUx5EHn?usp=share_link">drive link</a></li></ol></li></ol><ol type="1" id="54f23d0a-f130-45f5-8ba6-61a3d4779bba" class="numbered-list" start="7"><li>Invoice flow revamp: <ol type="a" id="89126f01-b967-41d7-9fb9-42da61344730" class="numbered-list" start="1"><li>Revamped existing invoice flow in backend and made it generic to handle Offline unacademy centre invoices and any invoice outside India</li></ol></li></ol><ol type="1" id="36a5632a-6bfa-4d3e-aadc-318db05dade5" class="numbered-list" start="8"><li>Separating Payment Micro-service from Monolith</li></ol></details></li></ul><ul id="403f57df-18aa-4ebb-8c05-ddc9ed57694f" class="toggle"><li><details open=""><summary>🔥 <strong>Key</strong> <strong>Contribution:</strong></summary><ol type="1" id="88e49fa0-d024-4371-9de4-d863acca6251" class="numbered-list" start="1"><li>Actively collaborating with Product, QA, and Design teams to ship high-quality product</li></ol><ol type="1" id="4225d4b3-f8c6-4d11-b4a2-02335135ed0e" class="numbered-list" start="2"><li>Solving problems of simple to medium complexity independently</li></ol><ol type="1" id="08bcd53c-bae1-47e0-98bd-addd40299b14" class="numbered-list" start="3"><li>Covers most of the corner cases proactively and give QA build with no P0 issues</li></ol><ol type="1" id="8d556595-6f01-4fcb-9518-8c3eb650ed70" class="numbered-list" start="4"><li>Ensures very few to no production issues discovered in my code</li></ol></details></li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f24fedb5-8331-4295-9e32-f11c315b6be3"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>Impact:
+</strong>1.Revamped payment emails flow: Same class structure was followed by other teams which in turn saved lots of bandwidth
+<strong>2.DST:</strong>
+    1. <strong>4.2+ Lakh </strong>learners<strong><strong> </strong></strong>have received scholarship codes till now and <strong>40k </strong>have purchased the subscription with it which turns out to be total <strong>76.7+ Cr </strong>Rs revenue (duration: 1 year of DST launch)
+    2.DST became one of the biggest traction product on the platform with <strong>26%</strong> of the new learners coming from the DST
+    3.The activation baseline moved by <strong>~10%</strong> for couple of categories(UPSC, Bank Exams etc)
+3.Payment method reordering:
+    Loan requests have seen a huge jump from ~35 requests per day to ~<strong>250 requests</strong> per day and increasing post launch</div></figure></details></li></ul><ul id="d49056cd-5ea2-4e7e-914e-28c958b412a1" class="toggle"><li><details open=""><summary><strong>Airtel X Labs</strong>(Bharti Airtel <strong>- </strong>Telecom)                                                                             Jun’20 - Oct’21(1 year 3 months)</summary><p id="8b27f45a-78dd-4087-a709-4bba47efafb8" class="">🌏 <strong>Location</strong>: Gurugram, India</p><p id="96ac65a5-cb87-47cc-ba62-442f318865c4" class="">🎃 <strong>Role</strong>: Software Engineer(Backend Engineer)<div class="indented"><p id="3fe0cb94-ba6a-4140-b5e7-21ee4375e92c" class="">Worked in AirtelWork(Internal workflow management platform) Team, AW is used by Airtel&#x27;s field force to efficiently handle DTH, broadband orders, prepaid/postpaid complaints etc</p></div></p><p id="04998a1a-f153-4e59-a599-aa0acf142575" class="">🛠️ <strong>Tech</strong>: Java, Spring Boot, Postgres, RabbitMQ, Jolt Transformations, Circuit Breaker Pattern</p><ul id="3a1435aa-f547-4347-847f-7af291113cc0" class="toggle"><li><details open=""><summary>📒 <strong>Key</strong> <strong>Projects:</strong></summary><ol type="1" id="e084e090-32eb-4b61-a34b-5461d980b56f" class="numbered-list" start="1"><li>Implemented Backend for Postpaid Complaints complete journey, currently Network Complaint Handling is PAN India, approx 3 Lakh complaints are handled per month</li></ol><ol type="1" id="44c462c7-6ac6-4252-8e35-5df56ba1253c" class="numbered-list" start="2"><li>Built Migration Micro-services and performed migration activity for Postpaid complaints (~2 Lakh complaints) from old system to AirtelWork</li></ol><ol type="1" id="ee029c78-8a07-4557-b70b-4c50ae7a971a" class="numbered-list" start="3"><li>Integrated different systems with AirtelWork for NCH(Network Complaints Handling) using JMS queue</li></ol><ol type="1" id="f60257d9-ba76-4616-9ebc-4e0885d8e94d" class="numbered-list" start="4"><li>Postgres: Optimized queries performance using proper indexing, wrote procedures</li></ol><ol type="1" id="6dae08ab-644c-468f-8ac4-2f5dc572ab0b" class="numbered-list" start="5"><li>Used recursion in one complex search based feature 🙂</li></ol></details></li></ul><ul id="3877c4f7-caa4-4df9-ab3e-ca0b775894f6" class="toggle"><li><details open=""><summary>🔥 <strong>Key</strong> <strong>Contribution:</strong></summary><ol type="1" id="7ea9d9d0-1baf-462b-823b-2d3b6cd27983" class="numbered-list" start="1"><li>Responsible for Design, Development, and deploying features for NCH Postpaid</li></ol><ol type="1" id="d0b5ce9b-3d29-467b-bbb2-00cf487765e4" class="numbered-list" start="2"><li>Responsible for priority resolution of Production/SIT(test env) Issues</li></ol><ol type="1" id="973fe144-d303-42cf-b62f-1d4753316606" class="numbered-list" start="3"><li>Fault tolerant system(Used Circuit Breaker Pattern and RabbitMQ Delayed Delivery)</li></ol><ol type="1" id="d39e986e-d70f-4b5d-bd5b-8dcbae61cae8" class="numbered-list" start="4"><li>Used Design Patterns, Unit Testing, Sonarlint fixes</li></ol></details></li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3e093bf2-b053-4369-a5f9-8589e2a96a74"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>Impact</strong>:<ol type="1" id="64183122-d8fe-47df-b19f-8287c4b13783" class="numbered-list" start="1"><li>Increase productivity: Jan’21 - 72/day complaints to Jul’21 - 92/day complaints resolution</li></ol><ol type="1" id="d2d4bc68-d822-4025-b490-3bf1a1bc5b7e" class="numbered-list" start="2"><li>10% - 17% Increase in Complaints Resolution in all formats(resolution in 7 days, 15 days and 30 days)</li></ol><ol type="1" id="61bc41a1-6376-4d6c-bad0-03c0756b7ed5" class="numbered-list" start="3"><li>Decrease in New Complaints Raised from 4 Lakh/Month to 3 Lakh/Month</li></ol><ol type="1" id="d4633b52-bd24-4d91-9823-784beda8df8c" class="numbered-list" start="4"><li>Improved complaints search latency by 30% using proper indexing in Postgres</li></ol><ol type="1" id="2da5fb0b-e456-403e-8a8e-ccd6e603c817" class="numbered-list" start="5"><li>Maintained Test Cases with Code Coverage &gt;= 85%</li></ol></div></figure></details></li></ul></details></li></ul><ul id="5210151e-2473-451a-a224-558b70ceb1e5" class="toggle"><li><details open=""><summary><strong>Tech(familiar with)</strong></summary><blockquote id="95a322ce-3cf6-4268-91ba-f34a4a1d61d8" class=""><strong>Frontend</strong> - ReactJs<strong> </strong>| <strong>Backend</strong> - C++, Java(SpringBoot), Go, Python(django)</blockquote><blockquote id="5def4764-bb90-476d-87a0-e83e55afb30c" class=""><strong>Database</strong> – MySQL, PostgreS, MongoDB</blockquote><blockquote id="2bb570b8-f1bb-416d-a002-822e9bf90711" class=""><strong>Tool </strong>– Postman, Burp Suite, Jenkins, Kibana, Git</blockquote><blockquote id="4eac0ebf-1c97-4456-b406-9b89b5c1456f" class=""><strong>Other </strong>– RabbitMQ, Junit(Mockito, Powermock), Google O-auth, Firebase, AWS, Docker</blockquote></details></li></ul><ul id="e1a32392-abb7-49de-a80f-30309bbd38d0" class="toggle"><li><details open=""><summary><strong>🧩 Personal Projects</strong></summary><ul id="812e2812-ae8a-4100-86da-e3e3353c39d9" class="toggle"><li><details open=""><summary>🚀 <strong>GetReferrals website(</strong>Referral portal live at <a href="http://referralsatfingertips.com/">http://referralsatfingertips.com/</a>).    Oct’21 - present(1 year 2 months)</summary><p id="0661c2ec-2fae-484d-88b9-dffa42c8fc22" class="">🥅 𝗣𝗿𝗼𝗯𝗹𝗲𝗺: <div class="indented"><p id="eda64c78-70f9-4372-9b8b-39fdbc84ef91" class="">Currently referrals are scattered all over LinkedIn and don&#x27;t reach to the correct audience and some people don&#x27;t prefer to share their referral over social media or any other platform plus people need to share their resume each time and it becomes difficult for the referrer as well to manage everything in their mails so as to make the referral process hassel free -&gt;</p></div></p><p id="8ea1a810-b062-4028-a34f-a6f234b7f543" class="">⚽ 𝗣𝘂𝗿𝗽𝗼𝘀𝗲𝗱 𝗦𝗼𝗹𝘂𝘁𝗶𝗼𝗻:<div class="indented"><p id="43322e72-e23d-483e-bc90-dc057a49d52b" class="">So I built this platform where you can post your referrals (being anonymous also), and people who want the referral can easily apply, people can recommend each other based on their resume, recommendation score helps the referrer to select perfect fit for the role.</p></div></p><p id="313a6081-7ad2-404b-a540-1f579edc91a4" class="">🧩 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘂𝘀𝗲𝗱:<div class="indented"><ol type="1" id="534e9d95-c1ae-4fe1-a75a-babe94d2a67c" class="numbered-list" start="1"><li>Frontend - ReactJs | Backend - Go | Database - MongoDB(Free Tier)</li></ol><ol type="1" id="d10f48f9-5c91-4c0c-9ab0-bbbe1c171602" class="numbered-list" start="2"><li>Authentication - Google O-auth</li></ol><ol type="1" id="1b859bee-ec0f-4b89-bae1-d31931a1e273" class="numbered-list" start="3"><li>Static content storage - Firebase(Free Tier)</li></ol><ol type="1" id="cca6e6b0-be90-40fe-a06f-215f5e3e7162" class="numbered-list" start="4"><li>Frontend and Backend both running on - AWS EC2(Free Tier)<ol type="a" id="5df849a1-98d1-408c-82c0-4432bf280cb4" class="numbered-list" start="1"><li>Nginx server i configured on EC2 to redirect Backend requests</li></ol><ol type="a" id="ae8dac08-cd04-4e87-955e-b9bf1a7a8c46" class="numbered-list" start="2"><li>Backend is deployed using docker container(DockerHub) </li></ol></li></ol><ol type="1" id="fef0ffe4-c447-44e5-b313-5906720ba318" class="numbered-list" start="5"><li>Free SSL Certificate - LetsEncrypt</li></ol><ol type="1" id="0bb35964-c33c-413a-a440-5e2e6f7471e6" class="numbered-list" start="6"><li>Responsive - this web-app is responsive on most devices</li></ol></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f7eb7786-3c8f-4e0a-a326-fb9967a5bb59"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Stats:
+1. 300+ users, 15+ referrals in first month of launch
+2. 4K+ page views, 450+ new users visits in first month of launch</div></figure><p id="7b9e66ef-e33a-434f-8c49-b9b27cd7a901" class="">🎥 <strong>Video</strong> <strong>Demo:</strong> <a href="https://drive.google.com/file/d/1HqIPlpKY5RwgTngO2DCvKdZ27SfqrvZt/view?usp=share_link">drive link</a></p></details></li></ul><ul id="246f49a5-4b29-4d1a-945d-50631763537f" class="toggle"><li><details open=""><summary><strong>Human Computer Interaction: Hands Free Mouse Cursor Control</strong>(Under Prof. SK Jain, NIT KKR)                   Jun’20</summary><p id="95a99f01-88b4-43b2-95a2-f08752df30f4" class="">🥅 𝗣𝗿𝗼𝗯𝗹𝗲𝗺: Disable person are unable to interact with computers</p><p id="29aace8b-c345-48e6-a236-8512301faa98" class="">⚽ 𝗣𝘂𝗿𝗽𝗼𝘀𝗲𝗱 𝗦𝗼𝗹𝘂𝘁𝗶𝗼𝗻: A solution by which user can control the cursor movement with the help of their facial landmarks and movement of mouth, eyes blink etc</p><p id="6d052068-cf1d-43d7-a4d8-15dbb3b53961" class="">🧩 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝘂𝘀𝗲𝗱:<div class="indented"><ol type="1" id="b65b2513-1b8c-4ea1-b03d-04cff432bb08" class="numbered-list" start="1"><li>OpenCV</li></ol><ol type="1" id="058b8882-3f86-468a-be49-dfd246d07bca" class="numbered-list" start="2"><li>Machine Learning</li></ol><ol type="1" id="80c49c50-23ec-42cd-9f31-637a30236f18" class="numbered-list" start="3"><li>Pyautogui library <strong> </strong></li></ol></div></p><p id="b5e26ad6-216d-44a1-95a7-ce18c09f22ad" class="">🎥 <strong>Video</strong> <strong>Demo:</strong> <a href="https://drive.google.com/file/d/1DNrPkUZLbNTZQg0AXhBZTVPI6V8IhZiQ/view?usp=share_link">drive link</a></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6312d167-49e6-43cd-8ae2-dd137865cdda"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Results: The success rate for various action like single click, double click, scroll mode, cursor movement observed in the range of 75% - 85%</div></figure></details></li></ul><ul id="196dd273-3593-4940-af26-49e537fa9dd0" class="toggle"><li><details open=""><summary><strong>A Comparison of Classification Algorithms </strong>(Under Prof.SK Jain, NIT KKR)             <strong>                                                 </strong>Nov’19</summary><p id="359fcf79-17a9-4421-bca0-233fbe0b2246" class="">🎯 <strong>Goal:</strong> To compare Classification algorithms Naïve Bayes, Random Forest and SVM was compared on different test dataset sizes</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d2f8d195-cecf-470c-b4b1-966b01244e31"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">SVM gave best results and max accuracy achieved was 80%</div></figure></details></li></ul><ul id="2cf67a82-0020-4136-bea8-edde49e2600c" class="toggle"><li><details open=""><summary><strong>Hand Written Digit Recognition </strong>                                                                                                                                   Jan’19</summary><p id="1ca33bc6-50c1-412e-be18-962479ecec75" class="">🎯 Classification algorithms KNN and Random Forest are compared on MNIST handwritten digit dataset. Random Forest gave best results and max accuracy achieved was 96%. </p></details></li></ul><ul id="b7adbbea-4ca7-4b28-8ad1-a95657f36311" class="toggle"><li><details open=""><summary><strong>Contest Details Fetcher Python Script - </strong>Web scraping                                                                                            Nov’18</summary><p id="ace4e267-f605-4f33-a798-4072d2c0eb50" class="">🐍 Python(Selenium Library) script to fetch details of upcoming, past, and present contests from platforms like<div class="indented"><p id="0430f716-4b2a-40e9-b5b0-adc3a7392dfc" class="">Codechef, Hackerearth</p></div></p><p id="e054935d-9880-4458-80a7-3121fde0df4f" class="">🎥 <strong>Github: </strong><div class="indented"><p id="4017cc68-8e91-4179-9c76-1d936592569a" class=""><a href="https://github.com/dynamo214/Codechef-contests-detail-fetcher">https://github.com/dynamo214/Codechef-contests-detail-fetcher</a></p><p id="311b4881-7cdc-4cab-9080-51120d6f78e3" class=""><a href="https://github.com/dynamo214/Hackerearth-contest-details-fetcher">https://github.com/dynamo214/Hackerearth-contest-details-fetcher</a></p></div></p></details></li></ul></details></li></ul><ul id="dc56ce75-d3d7-4f62-89df-7fd42bdcbaf5" class="toggle"><li><details open=""><summary>🏆 <strong>Achievements</strong></summary><p id="be68ce37-2209-4a01-b91e-3932045ebf83" class="">🤝 Best team award in Airtel Work(Airtel X Labs) for <strong>Network Complaint Handling </strong>Project                                          Jan’21                                                                                          </p><ul id="b5cf4812-1b6e-44b4-a378-2019d936194e" class="toggle"><li><details open=""><summary>🥷🏻 <strong>Competitive programming                                                                                                             </strong>Dec’18 - present(4 years)</summary><p id="0ed5d8d7-61c7-4c04-b9cd-c7728753b544" class="">🎖️ <mark class="highlight-blue"><a href="https://www.codechef.com/users/dynamo214">Codechef://dynamo214</a></mark> - Highest Rating –<strong> 1848(4 </strong>🌟<strong>)</strong></p><p id="e7ddafa7-846c-4603-a68a-5db46a8deddf" class="">🏋🏻‍♂️ LeetCode Weekly Contest 250: World Rank - <strong>1936/13694                                                                                         </strong>Jul’21</p><p id="a34009c8-541e-462a-a237-5bcbcd1cdfe5" class="">🏋🏻‍♂️ CodeChef CookOff Overall: World Rank - <strong>5477 / 158642</strong> , Country Rank - <strong>3734 / 137027</strong></p><p id="a168b597-b475-4f1c-9e14-acf7d04a6ce2" class="">🏋🏻‍♂️ CodeChef CookOff Div2: World Rank – <strong>94/3277</strong>, Country Rank – <strong>67/3069</strong>                                                        Jul’19</p><p id="43782ae6-60d2-45c1-aa89-ee47abea2ba9" class="">🏋🏻‍♂️ CodeChef CookOff Div2: World Rank – <strong>48/1865</strong>, Country Rank – <strong>28/1657</strong>                                                       Apr’19</p><p id="431dfe3d-4512-467e-9c3c-21f397e30991" class="">🏋🏻 Codeforces Round #527 Div 3: World<strong> </strong>Rank<strong> - 1195 / 26072 </strong>                                                                                Dec’18</p><p id="3ef74fd9-cd0a-43f7-833d-66b23e3c0771" class="">🏋🏻 HackerEarth December Circuits: World Rank -<strong> 1275 / 9187 </strong>                                                                                Dec’18</p><ul id="79ed0fed-75c7-454c-a544-1bbcec3a3d1f" class="toggle"><li><details open=""><summary>CodeChef SnackDown Reached upto Online 1B round                                                                                        Oct’18</summary><p id="52af56c9-0ad4-4e0a-8b83-6d88f4479f3f" class="">🏋🏻 SnackDown Online Qualifier: World Rank -<strong> 1780 / 27875 </strong>teams		</p><p id="0568f563-5e6b-436d-bfd5-8eec176f09dc" class="">🏋🏻 SnackDown Online Round 1A: World Rank -<strong> 3502 / 15856 </strong>teams		</p><p id="dcea2122-bad0-4d52-b3c8-8167e744c4da" class="">🏋🏻 SnackDown Online Round 1B: World Rank - <strong>4036 / 15856 </strong>teams</p></details></li></ul><p id="fa384ac0-337a-46a9-b352-7d6812683f6e" class="">🎖️1st in Algoholics (Programming Contest, Techspardha NIT KKR)                                                                                 ‘18</p></details></li></ul></details></li></ul><ul id="54941b58-4ae1-42d1-b7a6-0ffc9ac40335" class="toggle"><li><details open=""><summary>🎳 <strong>Additional Activities</strong>                                                                                               </summary><ul id="0404acd9-fac6-4a4f-a22f-62e8c8aa0aea" class="toggle"><li><details open=""><summary>🐞 <strong>Bug Bounty Hunter</strong>                                                                                                                  Mar’20 - Jul’20(5 months)</summary><p id="d54b11ae-f9ab-493c-ba58-2fddccf1c3f1" class="">🎃 Role: Self Employed</p><p id="af41e1e3-4040-4926-b02b-eb20e250111d" class="">🛠️ Tool - Burp Suite</p><p id="ca43e46c-7c23-4e08-a177-86e75984e450" class="">🐞 Acknowledged by companies for Ethically Reporting vulnerabilities for their Web Applications</p><p id="4174e7b5-e989-49a9-8199-abda909c2bb0" class="">🐞 Targets - Upgrad.com, Moxie.xyz, Snyk.io, Cartrover.com, ServiceNow.com and Leetcode.com</p></details></li></ul><ul id="5ac8cd9a-1e37-49cd-a8bf-2877645e2461" class="toggle"><li><details open=""><summary>📝 <strong>Computer Science Subject Matter Expert(CS-SME)</strong> - Chegg                                        Oct’19 - Feb’20(5 months)</summary><p id="a8fc7477-36e2-4684-8ea6-acf1c5f89ab8" class="">🎃 Role: Freelance</p><p id="ff3f13bf-2964-4a82-8a19-4e5c564cde3a" class="">👉 Worked as a CS-SME for a short period of time during college days</p><p id="35788584-2107-4b61-bc9f-77fa82d293bd" class="">👉 Solved ~25 problems</p></details></li></ul><p id="c366ef6d-950a-4076-bb27-244a563e296b" class="">
+</p></details></li></ul><p id="67e31526-ba5c-41f8-8cc0-b18d135b1eb2" class="">
+</p></div></article></body></html>
